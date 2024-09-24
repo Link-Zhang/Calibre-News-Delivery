@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+# vim:fileencoding=utf-8
+from calibre.web.feeds.news import BasicNewsRecipe
+
+
+class AdvancedUserRecipe1718109535(BasicNewsRecipe):
+    title          = 'The Gamer'
+    language = 'en'
+    __author__ = 'Spicy Poison'
+    description = 'TheGamer is a gaming site with a different spin on things, and we break some of the biggest stories around.'
+    publisher = 'Valnet Publishing Group'
+    oldest_article = 7
+    max_articles_per_feed = 50
+    no_stylesheets = True
+    use_embedded_content = False
+    ignore_duplicate_articles = {'title', 'url'}
+    encoding = 'utf-8'
+    masthead_url = 'https://www.valnetinc.com/images/brand/tg-logo-full-colored-dark.svg'
+    remove_empty_feeds = True
+    auto_cleanup   = True
+
+    feeds          = [
+        ('Game News', 'https://www.thegamer.com/feed/category/game-news/'),
+        ('AAA Games News', 'https://www.thegamer.com/feed/aaa-games/news/'),
+        ('Indie Games', 'https://www.thegamer.com/feed/indie-games/'),
+    ]
